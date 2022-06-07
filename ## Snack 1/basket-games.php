@@ -7,43 +7,44 @@ Olimpia Milano - Cantù | 55-60 -->
 <?php 
   
   $arrayGame = [
-    $game_1 = [
+    [
+      "home_team" => 'Boston Celtics',
+      "visitors" => 'Whashington Wizards',
+      "hote_points" => 107,
+      "vist_points" => 88,
+    ],
 
-      $home_team => 'Boston Celtics',
-      $visitors => 'Whashington Wizards',
-      $hote_points => 107,
-      $vist_points => 88,
+    [
+      "home_team" => 'Dallas Mavericks',
+      "visitors" => 'Orlando Magic',
+      "hote_points" => 120,
+      "vist_points" => 110,
     ],
-    $game_2 = [
-    
-      $home_team => 'Dallas Mavericks',
-      $visitors => 'Orlando Magic',
-      $hote_points => 120,
-      $vist_points => 110,
+
+    [
+      "home_team" => 'Sacramento Kings',
+      "visitors" => 'Memphis',
+      "hote_points" => 103,
+      "vist_points" => 120,
     ],
-    $game_3 = [
-    
-      $home_team => 'Sacramento Kings',
-      $visitors => 'Memphis',
-      $hote_points => 103,
-      $vist_points => 120,
+
+    [
+      "home_team" => 'Seattle Supersonics',
+      "visitors" => 'New Orleans Pelicans',
+      "hote_points" => 90,
+      "vist_points" => 83,
     ],
-    $game_4 = [
-    
-      $home_team => 'Seattle Supersonics',
-      $visitors => 'New Orleans Pelicans',
-      $hote_points => 90,
-      $vist_points => 83,
-    ],
-    $game_5 = [
-    
-      $home_team => 'Huston Comets',
-      $visitors => 'Santa Cruz Warriors',
-      $hote_points => 108,
-      $vist_points => 120,
+
+    [
+      "home_team" => 'Huston Comets',
+      "visitors" => 'Santa Cruz Warriors',
+      "hote_points" => 108,
+      "vist_points" => 120,
     ]
     
-  ]
+    ];
+
+  var_dump($arrayGame);
 
 ?>
 
@@ -57,6 +58,11 @@ Olimpia Milano - Cantù | 55-60 -->
   <title>Nba last game</title>
 </head>
 <body>
-  
+    <ul>
+      <?php
+      for ($i=0; $i < count($arrayGame) ; $i++): ?>
+            <li><?php echo $arrayGame[$i]["home_team"]; ?> - <?php echo $arrayGame[$i]["visitors"]; ?> | <?php echo $arrayGame[$i]["hote_points"]; ?> - <?php echo $arrayGame[$i]["vist_points"]; ?>    </li>
+      <?php endfor; ?>
+    </ul>
 </body>
 </html>
